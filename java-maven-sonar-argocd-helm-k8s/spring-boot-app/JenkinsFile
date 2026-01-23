@@ -54,6 +54,9 @@ pipeline {
             dir("${WORKSPACE}") {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
+                    pwd
+                    ls -la
+                    ls -la .git
                     git config user.email "sonaashukatkar@gmail.com"
                     git config user.name "sonali"
                     BUILD_NUMBER=${BUILD_NUMBER}
