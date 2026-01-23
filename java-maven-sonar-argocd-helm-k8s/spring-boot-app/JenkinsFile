@@ -54,9 +54,7 @@ pipeline {
             dir("${WORKSPACE}") {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
-                    pwd
-                    ls -la
-                    ls -la .git
+                    git config --global --add safe.directory ${WORKSPACE}
                     git config --global user.email "sonaashukatkar@gmail.com"
                     git config --global user.name "sonali"
                     BUILD_NUMBER=${BUILD_NUMBER}
