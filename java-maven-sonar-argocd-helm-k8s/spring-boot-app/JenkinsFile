@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'sonali0910/ultimate-cicd-demo'
+      image 'sonali0910/my-first-docker-image-demo'
       args '--user root --entrypoint="" -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
     }
   }
@@ -31,7 +31,7 @@ pipeline {
     }
     stage('Build and Push Docker Image') {
       environment {
-        DOCKER_IMAGE = "sonali0910/ultimate-cicd-demo:${BUILD_NUMBER}"
+        DOCKER_IMAGE = "sonali0910/my-first-docker-image-demo:${BUILD_NUMBER}"
         // DOCKERFILE_LOCATION = "java-maven-sonar-argocd-helm-k8s/spring-boot-app/Dockerfile"
         REGISTRY_CREDENTIALS = credentials('docker-cred')
       }
