@@ -1,21 +1,21 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: spring-boot-app
-  labels:
-    app: spring-boot-app
-spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: spring-boot-app
-  template:
-    metadata:
-      labels:
-        app: spring-boot-app
-    spec:
-      containers:
-      - name: spring-boot-app
-        image: abhishekf5/ultimate-cicd:19
-        ports:
-        - containerPort: 8080
+apiVersion:33
+kind:33
+metadata:33
+  name:33
+  labels:33
+    app:33
+spec:33
+  replicas:33
+  selector:33
+    matchLabels:33
+      app:33
+  template:33
+    metadata:33
+      labels:33
+        app:33
+    spec:33
+      containers:33
+      - name:33
+        image:33
+        ports:33
+        - containerPort:33
