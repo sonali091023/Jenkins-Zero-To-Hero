@@ -1,21 +1,21 @@
-apiVersion:35
-kind:35
-metadata:35
-  name:35
-  labels:35
-    app:35
-spec:35
-  replicas:35
-  selector:35
-    matchLabels:35
-      app:35
-  template:35
-    metadata:35
-      labels:35
-        app:35
-    spec:35
-      containers:35
-      - name:35
-        image:35
-        ports:35
-        - containerPort:35
+apiVersion:36
+kind:36
+metadata:36
+  name:36
+  labels:36
+    app:36
+spec:36
+  replicas:36
+  selector:36
+    matchLabels:36
+      app:36
+  template:36
+    metadata:36
+      labels:36
+        app:36
+    spec:36
+      containers:36
+      - name:36
+        image:36
+        ports:36
+        - containerPort:36
