@@ -1,13 +1,13 @@
 pipeline {
   agent any
   tools{
-	docker 'docker'
-    }
-    stages {
+    dockerTool 'docker'
+  }
+  stages {
     stage('clean workspace'){
       steps{
         cleanWs()
-         }
+       }
     }
     stage('Checkout') {
       steps {
